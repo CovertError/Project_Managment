@@ -156,7 +156,7 @@ public class JPanelListProjects extends javax.swing.JPanel {
                             stmt.close();
                         }
 
-                    }catch (Exception e){e.printStackTrace();}
+                    }catch (Exception e){}
                 }
             }
         });
