@@ -71,6 +71,11 @@ public class JPanelProjectMenu extends javax.swing.JPanel {
         });
 
         jButton3.setText("List Projects");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Remove Project ");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -185,6 +190,31 @@ public class JPanelProjectMenu extends javax.swing.JPanel {
             contain.removeAll();
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             this.jframe.add(jPanelCreateProject);
+            this.jframe.validate();
+            this.jframe.repaint();
+            this.jframe.pack();
+            this.jframe.setVisible(true);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+
+            JPanelListProjects jPanelListProjects = new JPanelListProjects(this.jframe);
+            this.jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            double width = screenSize.getWidth();
+            width= width/6;
+            int intWidth = (int) Math.round(width);
+            double height = screenSize.getHeight();
+            height = height/6;
+            int intheight = (int) Math.round(height);
+            this.jframe.setLocation(intWidth, intheight);
+            Container contain = this.jframe.getContentPane();
+            contain.removeAll();
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            this.jframe.add(jPanelListProjects);
             this.jframe.validate();
             this.jframe.repaint();
             this.jframe.pack();
